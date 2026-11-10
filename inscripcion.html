@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Inscripción Padel Fest</title>
+<meta name="description" content="Inscríbete a Padel Fest 2027: nombre, teléfono, correo, categoría, pareja y talla.">
+<link rel="icon" href="assets/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --night:#16191C;--night-2:#1F2327;--ink:#2C3339;--paper:#EEF1F1;--paper-2:#DDE3E3;--white:#FFFFFF;
+  --lime:#CDE800;--green:#4FC63A;--teal:#00ABA9;--teal-deep:#007F7E;
+  --grad:linear-gradient(100deg,#CDE800 0%,#4FC63A 48%,#00ABA9 100%);
+  --text-night:#C9D0D4;--muted-night:#8E989E;--muted-paper:#5A646B;--danger:#B3261E;
+  --line-night:rgba(255,255,255,.12);
+  --f-body:"Bricolage Grotesque",system-ui,sans-serif;--f-wide:"Archivo",system-ui,sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,monospace;
+  --container:1120px;color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--night);color:var(--text-night);font:400 17px/1.55 var(--f-body);font-stretch:90%;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--container);margin:0 auto}
+.bleed{margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.wide{font-family:var(--f-wide);font-style:italic;font-stretch:125%;text-transform:uppercase;letter-spacing:-.01em}
+.eyebrow{font:700 12px/1.2 var(--f-body);font-stretch:100%;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin:0 0 14px}
+
+.top{position:relative;overflow:hidden;isolation:isolate;padding-block:28px clamp(44px,7vw,80px)}
+.mosaic{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);z-index:-2}
+.mosaic div{background-size:cover;background-position:center}
+.top::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(22,25,28,.6),rgba(22,25,28,.82) 60%,var(--night))}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
+.brand img{height:40px;width:auto}
+.brand span{line-height:.9;font-size:17px}.brand i{display:block;font-weight:300}.brand b{display:block;font-weight:900}
+h1{margin:clamp(34px,6vw,64px) 0 0;color:var(--white);line-height:.9;font-weight:300;font-size:clamp(40px,8vw,92px);font-stretch:75%;text-transform:uppercase;font-family:var(--f-body)}
+h1 b{font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin:18px 0 0;font-size:19px;max-width:560px;color:var(--text-night)}
+.sub b{color:var(--white);font-weight:700}
+
+main{padding-block:clamp(40px,6vw,72px)}
+.grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line-night)}
+.steps li:last-child{border-bottom:1px solid var(--line-night)}
+.steps em{font:600 15px/1 var(--f-mono);font-style:normal;color:var(--lime);padding-top:6px}
+.steps h3{margin:0;font:800 22px/1.1 var(--f-body);font-stretch:75%;text-transform:uppercase;color:var(--white)}
+.steps p{margin:6px 0 0;color:var(--text-night);font-size:16px}
+.facts{margin:28px 0 0;display:grid;gap:10px;color:var(--text-night);font-size:16px}
+.facts b{color:var(--lime);letter-spacing:.14em;text-transform:uppercase;font-size:12px;font-stretch:100%;display:block}
+.facts a{color:var(--lime);font-weight:700}
+
+form,.done{border:1.5px solid transparent;border-radius:26px;padding:clamp(22px,3.4vw,40px);background:linear-gradient(var(--paper),var(--paper)) padding-box,var(--grad) border-box;color:var(--ink)}
+form{display:grid;gap:18px}
+form h2,.done h2{margin:0;font:300 clamp(28px,3.6vw,40px)/1 var(--f-body);font-stretch:75%;text-transform:uppercase;color:var(--ink)}
+form h2 b,.done h2 b{font-weight:800}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:600px){.two{grid-template-columns:1fr}}
+label{display:grid;gap:8px;font:700 12px/1 var(--f-body);font-stretch:100%;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);min-width:0}
+input,select{width:100%;font:500 16px/1.4 var(--f-body);font-stretch:100%;color:var(--ink);background:var(--white);border:1.5px solid var(--paper-2);border-radius:12px;padding:14px 16px;text-transform:none;letter-spacing:0;min-height:50px}
+input:focus,select:focus{border-color:var(--teal);outline:none}
+input::placeholder{color:#7A858C}
+.invalid input,.invalid select{border-color:var(--danger)}
+.msg{display:none;color:var(--danger);font:500 13px/1.3 var(--f-body);letter-spacing:0;text-transform:none}
+.invalid .msg{display:block}
+.consent{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;text-transform:none;letter-spacing:0;font:500 14px/1.45 var(--f-body);color:var(--muted-paper)}
+.consent input{width:20px;height:20px;min-height:0;margin-top:2px;accent-color:var(--teal)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font:700 15px/1 var(--f-body);font-stretch:100%;letter-spacing:.1em;text-transform:uppercase;padding:18px 32px;border:1.5px solid transparent;cursor:pointer;background:var(--grad);color:#102015;transition:transform .2s cubic-bezier(.2,.7,.3,1),filter .12s}
+.btn:hover{filter:brightness(1.07)}.btn:active{transform:scale(.97)}.btn[disabled]{opacity:.6;cursor:wait}
+.btn.line{background:transparent;border-color:var(--ink);color:var(--ink)}
+.formerr{margin:0;color:var(--danger);font:500 14px/1.4 var(--f-body)}
+.done[hidden],form[hidden]{display:none}
+.done{display:grid;gap:18px}
+.done p{margin:0;max-width:480px}
+.recap{margin:0;display:grid;gap:0;border-top:1px solid var(--paper-2)}
+.recap div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--paper-2)}
+.recap dt{font:700 12px/1.6 var(--f-body);font-stretch:100%;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep)}
+.recap dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.preview{border:1.5px dashed var(--danger);border-radius:12px;padding:12px 14px;color:var(--danger);font:600 14px/1.4 var(--f-body)}
+footer{border-top:1px solid var(--line-night);padding-block:30px;color:var(--muted-night);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+footer a{color:var(--lime);font-weight:700}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top bleed">
+  <div class="mosaic" aria-hidden="true">
+    <div style="background-image:url(assets/hero1.jpg)"></div>
+    <div style="background-image:url(assets/hero2.jpg)"></div>
+    <div style="background-image:url(assets/hero3.jpg)"></div>
+  </div>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Padel Fest, inicio"><img src="assets/mark.png" alt=""><span class="wide"><i>Padel</i><b>Fest</b></span></a>
+    <h1>Inscripción <b>2027</b></h1>
+    <p class="sub"><b>Septiembre 2027</b> · Padel Warehouse, Santo Domingo. Inscribe a tu pareja y asegura tu lugar.</p>
+  </div>
+</header>
+
+<main class="bleed">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Después de inscribirte</p>
+      <ol class="steps">
+        <li><em>1</em><div><h3>Completas el formulario</h3><p>Tus datos, tu categoría y el nombre de tu pareja.</p></div></li>
+        <li><em>2</em><div><h3>Recibes un WhatsApp</h3><p>Te confirmamos la inscripción al número que indiques.</p></div></li>
+        <li><em>3</em><div><h3>Pagas con Azul</h3><p>El mismo mensaje trae tu link de pago. La inscripción queda asegurada al pagar.</p></div></li>
+      </ol>
+      <div class="facts">
+        <div><b>Sede</b>Padel Warehouse, Santo Domingo</div>
+        <div><b>Dudas</b><a href="https://www.instagram.com/padelfest_rd/" target="_blank" rel="noopener">@padelfest_rd en Instagram</a></div>
+      </div>
+    </div>
+
+    <div>
+      <form id="form" novalidate>
+        <h2>Inscribe a tu <b>pareja</b></h2>
+        <div class="two">
+          <label id="l-name" for="name">Nombre completo<input id="name" name="name" autocomplete="name" placeholder="Tu nombre y apellido"><span class="msg">Escribe tu nombre y apellido.</span></label>
+          <label id="l-phone" for="phone">Teléfono (WhatsApp)<input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="809 555 1234"><span class="msg">Ingresa 10 dígitos, o el número con +código de país.</span></label>
+        </div>
+        <label id="l-email" for="email">Correo<input id="email" name="email" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com"><span class="msg">Ingresa un correo válido.</span></label>
+        <div class="two">
+          <label id="l-category" for="category">Categoría
+            <select id="category" name="category"><option value="">Elige tu categoría</option></select>
+            <span class="msg">Elige una categoría.</span>
+          </label>
+          <label id="l-size" for="size">Talla de camiseta
+            <select id="size" name="size"><option value="">Elige tu talla</option></select>
+            <span class="msg">Elige una talla.</span>
+          </label>
+        </div>
+        <label id="l-partner" for="partner">Pareja<input id="partner" name="partner" autocomplete="off" placeholder="Nombre y apellido de tu pareja"><span class="msg">Escribe el nombre de tu pareja.</span></label>
+        <div class="hp" aria-hidden="true"><label for="website">No llenar<input id="website" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <label class="consent" id="l-consent" for="consent"><input id="consent" name="consent" type="checkbox"><span>Acepto que Padel Fest use mis datos para gestionar mi inscripción y contactarme por WhatsApp y correo.</span></label>
+        <p class="formerr" id="formerr" role="alert"></p>
+        <button class="btn" id="send" type="submit">Inscribirme</button>
+      </form>
+
+      <section class="done" id="done" hidden aria-live="polite">
+        <h2>Inscripción <b>recibida</b></h2>
+        <p id="done-text">Revisa tu WhatsApp: te enviaremos la confirmación y tu link de pago de Azul.</p>
+        <dl class="recap" id="recap"></dl>
+        <div class="preview" id="preview" hidden>Vista previa: esta inscripción no se guardó ni se envió ningún mensaje. Falta conectar el formulario.</div>
+        <button class="btn line" id="again" type="button">Inscribir a otra pareja</button>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="bleed">
+  <div class="wrap"><span>Producido por Ricardo Events · República Dominicana</span><a href="https://www.instagram.com/padelfest_rd/" target="_blank" rel="noopener">@padelfest_rd</a></div>
+</footer>
+
+<script>
+var CONFIG = {
+  edition: "PF27",
+  endpoint: "",   /* URL del webhook (Make, Zapier, Apps Script). Vacío = modo vista previa, no guarda nada */
+  categories: [   /* confirmar las categorías de 2027 */
+    {g:"Mixto", items:["Mixto 3","Mixto 4"]},
+    {g:"Masculino", items:["Masculino 2","Masculino 3","Masculino 4","Masculino 5"]},
+    {g:"Femenino", items:["Femenino 2","Femenino 3","Femenino 4","Femenino 5"]}
+  ],
+  sizes: ["XS","S","M","L","XL","XXL"]
+};
+
+var $=function(id){return document.getElementById(id)};
+(function fill(){
+  var c=$("category");CONFIG.categories.forEach(function(grp){
+    var o=document.createElement("optgroup");o.label=grp.g;
+    grp.items.forEach(function(t){var op=document.createElement("option");op.value=t;op.textContent=t;o.appendChild(op)});c.appendChild(o)});
+  var s=$("size");CONFIG.sizes.forEach(function(t){var op=document.createElement("option");op.value=t;op.textContent=t;s.appendChild(op)});
+})();
+
+function normPhone(raw){
+  var t=String(raw||"").trim(),plus=t.charAt(0)==="+",d=t.replace(/\D/g,"");
+  if(plus){return(d.length>=8&&d.length<=15)?"+"+d:null}
+  if(d.length===10)return"+1"+d;
+  if(d.length===11&&d.charAt(0)==="1")return"+"+d;
+  return null;
+}
+function flag(id,bad){$(id).classList.toggle("invalid",bad);return bad}
+
+var form=$("form"),sending=false;
+form.addEventListener("submit",function(e){
+  e.preventDefault();if(sending)return;
+  $("formerr").textContent="";
+  var v={name:$("name").value.trim(),phone:normPhone($("phone").value),email:$("email").value.trim(),
+    category:$("category").value,size:$("size").value,partner:$("partner").value.trim(),consent:$("consent").checked};
+  var bad=false;
+  bad=flag("l-name",v.name.split(/\s+/).length<2)||bad;
+  bad=flag("l-phone",!v.phone)||bad;
+  bad=flag("l-email",!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.email))||bad;
+  bad=flag("l-category",!v.category)||bad;
+  bad=flag("l-size",!v.size)||bad;
+  bad=flag("l-partner",v.partner.length<3)||bad;
+  bad=flag("l-consent",!v.consent)||bad;
+  if(bad){$("formerr").textContent="Revisa los campos marcados en rojo.";var f=document.querySelector(".invalid input,.invalid select");if(f)f.focus();return}
+  if($("website").value)return; /* trampa para bots */
+  var payload={edition:CONFIG.edition,submittedAt:new Date().toISOString(),name:v.name,phone:v.phone,email:v.email,category:v.category,partner:v.partner,size:v.size,consent:true};
+  function finish(preview){
+    var rc=$("recap");rc.innerHTML="";
+    [["Nombre",v.name],["WhatsApp",v.phone],["Correo",v.email],["Categoría",v.category],["Pareja",v.partner],["Talla",v.size]].forEach(function(r){
+      var d=document.createElement("div"),a=document.createElement("dt"),b=document.createElement("dd");a.textContent=r[0];b.textContent=r[1];d.appendChild(a);d.appendChild(b);rc.appendChild(d)});
+    $("preview").hidden=!preview;form.hidden=true;$("done").hidden=false;$("done").scrollIntoView({block:"start"});
+  }
+  if(!CONFIG.endpoint){finish(true);return}
+  sending=true;$("send").disabled=true;$("send").textContent="Enviando";
+  fetch(CONFIG.endpoint,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)})
+    .then(function(){finish(false)})
+    .catch(function(){$("formerr").textContent="No pudimos enviar tu inscripción. Revisa tu conexión e inténtalo de nuevo."})
+    .then(function(){sending=false;$("send").disabled=false;$("send").textContent="Inscribirme"});
+});
+$("again").addEventListener("click",function(){form.reset();form.hidden=false;$("done").hidden=true;window.scrollTo({top:0})});
+</script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Padel Fest RD</title>
+<meta name="description" content="Padel Fest 2027: el evento más grande de pádel en República Dominicana. Septiembre 2027, Santo Domingo.">
+<link rel="icon" href="assets/mark.png">
+<link rel="canonical" href="https://padelfest.com.do/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Padel Fest 2027">
+<meta property="og:description" content="El evento más grande de pádel en República Dominicana. Septiembre 2027, Santo Domingo.">
+<meta property="og:url" content="https://padelfest.com.do/">
+<meta property="og:image" content="https://padelfest.com.do/assets/hero1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --night:#16191C;--night-2:#1F2327;--ink:#2C3339;--paper:#EEF1F1;--paper-2:#E2E7E7;--white:#FFFFFF;
+  --lime:#CDE800;--green:#4FC63A;--teal:#00ABA9;--teal-deep:#007F7E;
+  --grad:linear-gradient(100deg,#CDE800 0%,#4FC63A 48%,#00ABA9 100%);
+  --text-night:#C9D0D4;--muted-night:#8E989E;--muted-paper:#5A646B;
+  --line-night:rgba(255,255,255,.12);--line-paper:rgba(44,51,57,.16);
+  --f-body:"Bricolage Grotesque",system-ui,sans-serif;--f-wide:"Archivo",system-ui,sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,monospace;
+  --container:1180px;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--text-night);font:400 17px/1.55 var(--f-body);font-stretch:90%;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--container);margin:0 auto}
+.bleed{margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.eyebrow{font:700 12px/1.2 var(--f-body);font-stretch:100%;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin:0 0 14px}
+.on-paper .eyebrow{color:var(--teal-deep)}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+h2{font:300 clamp(34px,5.4vw,64px)/.98 var(--f-body);font-stretch:75%;text-transform:uppercase;color:var(--white)}
+h2 b{font-weight:800}
+.on-paper{background:var(--paper);color:var(--ink)}
+.on-paper h2{color:var(--ink)}
+section{padding-block:clamp(64px,9vw,108px)}
+.wide{font-family:var(--f-wide);font-style:italic;font-stretch:125%;text-transform:uppercase;letter-spacing:-.01em}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(22,25,28,.8);-webkit-backdrop-filter:saturate(150%) blur(14px);backdrop-filter:saturate(150%) blur(14px);border-bottom:1px solid var(--line-night)}
+.nav{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:38px;width:auto;display:block}
+.brand span{display:block;line-height:.9;color:var(--white);font-size:17px}
+.brand span i{display:block;font-weight:300}
+.brand span b{display:block;font-weight:900}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav a.link{font:600 13px/1 var(--f-body);font-stretch:100%;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--text-night)}
+.nav a.link:hover{color:var(--lime)}
+@media(max-width:900px){.nav ul{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font:700 14px/1 var(--f-body);font-stretch:100%;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  padding:17px 30px;border:1.5px solid transparent;cursor:pointer;transition:transform .2s cubic-bezier(.2,.7,.3,1),filter .12s,background .12s}
+.btn:active{transform:scale(.97)}
+.btn-grad{background:var(--grad);color:#102015}
+.btn-grad:hover{filter:brightness(1.07)}
+.btn-line{border-color:rgba(255,255,255,.4);color:var(--white);background:transparent}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.on-paper .btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-sm{padding:12px 20px;font-size:12px}
+
+.hero{position:relative;overflow:hidden;padding-block:clamp(56px,9vw,112px) clamp(56px,8vw,88px);isolation:isolate}
+.mosaic{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);z-index:-2}
+.mosaic div{background-size:cover;background-position:center}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(22,25,28,.55) 0%,rgba(22,25,28,.72) 45%,rgba(22,25,28,.97) 100%)}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1.5px solid transparent;background:linear-gradient(rgba(22,25,28,.7),rgba(22,25,28,.7)) padding-box,var(--grad) border-box;border-radius:999px;padding:9px 18px;font:700 12px/1 var(--f-body);font-stretch:100%;letter-spacing:.18em;text-transform:uppercase;color:var(--white)}
+.hero h1{margin-top:28px;color:var(--white);line-height:.88}
+.hero h1 .l1{display:block;font-weight:300;font-size:clamp(54px,12.5vw,168px)}
+.hero h1 .l2{display:block;font-weight:900;font-size:clamp(54px,12.5vw,168px);margin-left:clamp(0px,7vw,110px)}
+.hero .when{margin:30px 0 0;font:300 clamp(24px,3.4vw,40px)/1.1 var(--f-body);font-stretch:75%;text-transform:uppercase;color:var(--white)}
+.hero .when b{font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .where{margin:8px 0 0;color:var(--text-night);font-size:18px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.count-label{margin-top:56px}
+.count{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:600px}
+.count div{border:1.5px solid transparent;background:linear-gradient(rgba(22,25,28,.82),rgba(22,25,28,.82)) padding-box,var(--grad) border-box;border-radius:18px;padding:18px 8px 14px;text-align:center}
+.count b{display:block;font:600 clamp(32px,6.2vw,56px)/1 var(--f-mono);color:var(--white)}
+.count span{display:block;margin-top:10px;font:700 11px/1 var(--f-body);font-stretch:100%;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-night)}
+.count-note{margin:14px 0 0;color:var(--muted-night);font-size:14px}
+
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:end;margin-top:36px}
+.about p{margin:0;font-size:clamp(18px,2vw,22px);line-height:1.45;max-width:560px;text-wrap:pretty}
+.about p b{font-weight:800}
+.stat{display:flex;border:1.5px solid var(--teal);border-radius:6px;overflow:hidden;align-self:end;max-width:520px;font-stretch:75%;text-transform:uppercase}
+.stat b{background:var(--teal);color:var(--white);font-weight:800;font-size:22px;padding:14px 18px;white-space:nowrap}
+.stat span{padding:14px 18px;font-weight:600;font-size:20px;letter-spacing:.03em}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.exp-title{margin:72px 0 28px}
+.exp{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,36px) clamp(20px,3vw,40px)}
+.exp div{border-top:1.5px solid var(--teal);padding-top:16px;position:relative}
+.exp div::before{content:"";position:absolute;left:0;top:-5px;width:9px;height:9px;border-radius:50%;background:var(--teal)}
+.exp h4{font:800 20px/1.1 var(--f-body);font-stretch:75%;text-transform:uppercase;color:var(--ink)}
+.exp p{margin:8px 0 0;color:var(--muted-paper);font-size:16px}
+@media(max-width:860px){.exp{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.exp{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:56px}
+.gallery div{aspect-ratio:3/4;border-radius:16px;background-size:cover;background-position:center}
+@media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.brands{margin-top:56px;padding-top:28px;border-top:1px solid var(--line-paper)}
+.brands p.k{font:700 12px/1 var(--f-body);font-stretch:100%;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-paper);margin:0 0 16px}
+.brands ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 26px}
+.brands li{font:700 17px/1.2 var(--f-body);font-stretch:75%;text-transform:uppercase;color:var(--ink);letter-spacing:.03em}
+
+.ed-list{display:grid;gap:26px;margin-top:40px}
+.ed{border:1.5px solid transparent;border-radius:26px;background:linear-gradient(var(--night-2),var(--night-2)) padding-box,var(--grad) border-box;overflow:hidden}
+.ed-head{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:flex-end;padding:28px clamp(20px,3vw,36px);border-bottom:1px solid var(--line-night)}
+.ed-head h3{font:300 clamp(26px,3.4vw,38px)/1 var(--f-body);font-stretch:75%;text-transform:uppercase;color:var(--white)}
+.ed-head h3 b{font-weight:800}
+.ed-meta{display:flex;gap:10px 26px;flex-wrap:wrap;color:var(--text-night);font-size:16px}
+.ed-meta b{color:var(--lime);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:14px}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.res{padding:22px clamp(20px,3vw,36px);border-bottom:1px solid var(--line-night);border-right:1px solid var(--line-night);min-width:0}
+.res h4{margin:0 0 14px;font:700 13px/1 var(--f-body);font-stretch:100%;letter-spacing:.18em;text-transform:uppercase;color:var(--lime)}
+.res ol{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.res li{display:grid;grid-template-columns:48px 1fr;gap:10px;align-items:baseline}
+.res li em{font:600 11px/1 var(--f-mono);font-style:normal;color:var(--muted-night)}
+.res li.first em{color:var(--lime)}
+.res li span{color:var(--text-night);overflow-wrap:anywhere}
+.res li.first span{color:var(--white);font-weight:700}
+.pending{padding:24px clamp(20px,3vw,36px);color:var(--muted-night);font-size:16px}
+.ed-foot{padding:18px clamp(20px,3vw,36px);display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;color:var(--muted-night)}
+.ed-foot a{color:var(--lime);font-weight:700}
+
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,72px);margin-top:40px;align-items:start}
+.contact-grid p{max-width:380px;margin:0 0 22px;color:var(--muted-paper)}
+.ig{display:inline-flex;font:700 15px/1 var(--f-body);color:var(--teal-deep);text-decoration:none;border-bottom:1.5px solid var(--teal);padding-bottom:6px}
+form{display:grid;gap:18px;border:1.5px solid transparent;border-radius:24px;padding:clamp(22px,3vw,36px);background:linear-gradient(var(--white),var(--white)) padding-box,var(--grad) border-box}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:grid;gap:8px;font:700 12px/1 var(--f-body);font-stretch:100%;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);min-width:0}
+input,select,textarea{width:100%;font:500 16px/1.4 var(--f-body);font-stretch:100%;color:var(--ink);background:var(--paper);border:1.5px solid var(--paper-2);border-radius:12px;padding:14px 16px;text-transform:none;letter-spacing:0}
+input:focus,select:focus,textarea:focus{border-color:var(--teal);outline:none}
+textarea{min-height:130px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#7A858C}
+.err{margin:0;color:#B3261E;font:500 14px/1.4 var(--f-body)}
+.result{border:1.5px solid var(--teal);border-radius:14px;padding:18px;background:var(--paper);display:grid;gap:14px;color:var(--ink)}
+.result pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:500 14px/1.6 var(--f-mono)}
+.result .row{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:860px){.contact-grid,.two{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line-night);padding-block:36px;color:var(--muted-night);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top bleed">
+  <div class="nav">
+    <a class="brand" href="#inicio" aria-label="Padel Fest, inicio">
+      <img src="assets/mark.png" alt="">
+      <span class="wide"><i>Padel</i><b>Fest</b></span>
+    </a>
+    <ul>
+      <li><a class="link" href="#edicion">Edición 2027</a></li>
+      <li><a class="link" href="#ediciones">Ediciones anteriores</a></li>
+      <li id="nav-live" hidden><a class="link" href="en-vivo.html">En vivo</a></li>
+      <li><a class="link" href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-grad btn-sm" href="inscripcion.html">Inscribirme</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero bleed">
+    <div class="mosaic" aria-hidden="true">
+      <div style="background-image:url(assets/hero1.jpg)"></div>
+      <div style="background-image:url(assets/hero2.jpg)"></div>
+      <div style="background-image:url(assets/hero3.jpg)"></div>
+    </div>
+    <div class="wrap">
+      <span class="pill">Padel Fest Dominican Republic</span>
+      <h1 class="wide"><span class="l1">Padel</span><span class="l2">Fest 2027</span></h1>
+      <p class="when"><b>Septiembre 2027</b></p>
+      <p class="where">Padel Warehouse, Santo Domingo, República Dominicana</p>
+      <div class="cta-row">
+        <a class="btn btn-grad" href="inscripcion.html">Inscribirme al torneo</a>
+        <a class="btn btn-line" href="#edicion">Ver la edición</a>
+      </div>
+      <div class="eyebrow count-label">Faltan para septiembre 2027</div>
+      <div id="count" class="count" role="timer" aria-live="off">
+        <div><b id="cd-d">---</b><span>Días</span></div>
+        <div><b id="cd-h">--</b><span>Horas</span></div>
+        <div><b id="cd-m">--</b><span>Min</span></div>
+        <div><b id="cd-s">--</b><span>Seg</span></div>
+      </div>
+      <p class="count-note">Las fechas exactas del torneo se anunciarán pronto.</p>
+    </div>
+  </div>
+
+  <section id="edicion" class="on-paper bleed">
+    <div class="wrap">
+      <p class="eyebrow">Edición 2027</p>
+      <h2>Sobre <b>Padel Fest</b></h2>
+      <div class="about">
+        <p>Gracias al crecimiento acelerado del pádel en República Dominicana, Latinoamérica y Europa, llega al país <b>el evento más grande de pádel</b>. Competencia, diversión y entretenimiento en un mismo lugar.</p>
+        <div class="stat"><b>+400 jugadores</b><span>Masculino | Femenino</span></div>
+      </div>
+      <h2 class="exp-title">La <b>experiencia</b></h2>
+      <div class="exp">
+        <div><h4>Mesa técnica</h4><p>Supervisión técnica basada en estándares internacionales de juego.</p></div>
+        <div><h4>Fisioterapeutas</h4><p>Equipo especializado para el bienestar de los jugadores durante todo el evento.</p></div>
+        <div><h4>Welcome kit</h4><p>Cada participante recibe un kit con sorpresas y artículos esenciales para el torneo.</p></div>
+        <div><h4>Lounge area</h4><p>Un espacio cómodo para descansar y socializar entre partidos.</p></div>
+        <div><h4>Live music</h4><p>Música en vivo que acompaña la emoción del torneo.</p></div>
+        <div><h4>Chill zone</h4><p>Los mejores bares y restaurantes de la ciudad en un mismo lugar.</p></div>
+        <div><h4>Kid's stand</h4><p>Actividades seguras y entretenidas para los más pequeños.</p></div>
+        <div><h4>Food &amp; drinks</h4><p>Variedad de restaurantes para todos los gustos.</p></div>
+        <div><h4>Marcas de primer nivel</h4><p>Marcas reconocidas a nivel mundial con productos y servicios en el evento.</p></div>
+      </div>
+      <div class="gallery" aria-hidden="true">
+        <div style="background-image:url(assets/play.jpg)"></div>
+        <div style="background-image:url(assets/physio.jpg)"></div>
+        <div style="background-image:url(assets/kit.jpg)"></div>
+        <div style="background-image:url(assets/coffee.jpg)"></div>
+      </div>
+      <div class="brands">
+        <p class="k">Marcas con las que hemos colaborado</p>
+        <ul id="brands"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="ediciones" class="bleed">
+    <div class="wrap">
+      <p class="eyebrow">Historial</p>
+      <h2>Ediciones <b>anteriores</b></h2>
+      <div class="ed-list" id="ed-list"></div>
+    </div>
+  </section>
+
+  <section id="contacto" class="on-paper bleed">
+    <div class="wrap">
+      <p class="eyebrow">Contacto</p>
+      <h2>Escríbe<b>nos</b></h2>
+      <div class="contact-grid">
+        <div>
+          <p>Para patrocinio, prensa o cualquier duda sobre el torneo. También respondemos por Instagram.</p>
+          <a class="ig" href="https://www.instagram.com/padelfest_rd/" target="_blank" rel="noopener">@padelfest_rd en Instagram &rarr;</a>
+        </div>
+        <form id="form" novalidate>
+          <div class="two">
+            <label for="f-name">Nombre<input id="f-name" name="name" autocomplete="name" placeholder="Tu nombre completo"></label>
+            <label for="f-contact">Correo o teléfono<input id="f-contact" name="contact" autocomplete="email" placeholder="tucorreo@ejemplo.com"></label>
+          </div>
+          <label for="f-topic">Asunto
+            <select id="f-topic" name="topic">
+              <option>Inscripción al torneo</option>
+              <option>Patrocinio</option>
+              <option>Prensa y medios</option>
+              <option>Otro</option>
+            </select>
+          </label>
+          <label for="f-msg">Mensaje<textarea id="f-msg" name="msg" placeholder="Cuéntanos en qué te podemos ayudar"></textarea></label>
+          <p class="err" id="err" role="alert"></p>
+          <button class="btn btn-grad" type="submit">Enviar mensaje</button>
+          <div class="result" id="result" hidden>
+            <div><b>Mensaje listo.</b> Cópialo y envíalo por Instagram a @padelfest_rd.</div>
+            <pre id="result-text"></pre>
+            <div class="row">
+              <button class="btn btn-line btn-sm" type="button" id="copy">Copiar mensaje</button>
+              <a class="btn btn-grad btn-sm" href="https://ig.me/m/padelfest_rd" target="_blank" rel="noopener">Abrir Instagram</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bleed">
+  <div class="wrap">
+    <span class="wide" style="color:var(--white);font-size:16px"><span style="font-weight:300">Padel</span> <b style="font-weight:900">Fest</b></span>
+    <span>Producido por Ricardo Events · República Dominicana</span>
+    <a href="https://www.instagram.com/padelfest_rd/" target="_blank" rel="noopener">@padelfest_rd</a>
+  </div>
+</footer>
+
+<script>
+var CONFIG = {
+  liveEnabled: false,                        /* true = muestra "En vivo" en el menú, solo cuando Cesar autorice */
+  nextEdition: "2027-09-01T00:00:00-04:00",  /* cambiar por la fecha exacta cuando se confirme */
+  formEndpoint: ""                           /* URL de un servicio de formularios (Formspree, Apps Script). Vacío = arma el mensaje para copiar */
+};
+
+if(CONFIG.liveEnabled)document.getElementById("nav-live").hidden=false;
+
+var BRANDS = ["Metaldom","Mercedes-Benz","Banreservas","JMMB","Sport Ice","Bastet Construction","Arajet","Unicaribe","Red Bull","San Pellegrino","Dolo-Neuromey","Yokohama","Häagen-Dazs","Drizoro","Ferrelíder","Rica","Aperol Spritz","Kahkow","Acqua Panna","Didáctica","Fundación St. Jude","Nature Valley","Fisiomasah","Aqualit","Seguros Crecer","Michelob Ultra"];
+
+var EDITIONS = [
+  { title:"Padel Fest <b>Santo Domingo</b>", when:"Mayo 2026", venue:"Padel Warehouse",
+    note:"Resultados tal como se publicaron en Instagram.", link:"https://lolaharel.pixieset.com/padelfestdia1copy", linkText:"Ver fotos del torneo",
+    cats:[
+      {n:"D. Masculino", r:[["1.º","Julio Carrasco & Emmanuel Reynoso"],["2.º","Javier Solares & Víctor del Giudice"]]},
+      {n:"D. Femenina", r:[["1.º","Marlenis Peralta & Anyelina Ramírez"]]},
+      {n:"C. Masculino", r:[["1.º","Eduardo Suncar & Anthony Albrincoles"],["2.º","Antonio Colon & Ismael Reynoso"],["Cons.","Samuel Marta & Andrés Domínguez"]]},
+      {n:"C. Femenina", r:[["2.º","Valerie Bodden & Lissette Marra"]]},
+      {n:"Mixto Open", r:[["1.º","Javier Lucero & Joelle Schad"],["2.º","Chandra Capozzi & Winter Jones"],["Cons.","Gustavo Guerrero & Loren Medrano"]]}
+    ]},
+  { title:"Padel Fest <b>Santo Domingo</b>", when:"Diciembre 2025", venue:"Grove",
+    note:"Campeones de las finales publicadas en Instagram el 8 de diciembre de 2025.",
+    cats:[
+      {n:"Final D Masculina", r:[["Camp.","Carlos Vargas & Manuel Paniagua"],["Final","Héctor Dotel & José Brea"]]},
+      {n:"Final C Femenina", r:[["Camp.","Ana Aybar & Eva Gil"],["Final","Laura Garcia & Ana De Boyrie"]]},
+      {n:"Final C Masculina", r:[["Camp.","Pedro Victoriano & Izzet Samsur"],["Final","Michael Fernández & Ezequiel Nina"]]},
+      {n:"Final Mixto A", r:[["Camp.","Michelle Pérez & Starlin Javier"],["Final","Chandra Capozzi & José Julián Pérez"]]}
+    ]},
+  { title:"Padel Fest <b>Cap Cana</b>", when:"Septiembre 2025", venue:"Los Establos Padel Club", pending:"Resultados por publicar." },
+  { title:"Padel Fest <b>Santiago</b>", when:"Mayo 2025", venue:"STI Racket Club", pending:"Resultados por publicar." }
+];
+
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+(function(){
+  var ul=document.getElementById("brands");BRANDS.forEach(function(b){ul.appendChild(el("li",null,b))});
+  var host=document.getElementById("ed-list");
+  EDITIONS.forEach(function(ed){
+    var card=el("article","ed"),head=el("div","ed-head"),h=el("h3");h.innerHTML=ed.title;head.appendChild(h);
+    var m=el("div","ed-meta"),a=el("span");a.appendChild(el("b",null,ed.when));m.appendChild(a);m.appendChild(el("span",null,ed.venue));head.appendChild(m);
+    card.appendChild(head);
+    if(ed.pending){card.appendChild(el("div","pending",ed.pending))}
+    else{
+      var g=el("div","cat-grid");
+      ed.cats.forEach(function(c){
+        var d=el("div","res");d.appendChild(el("h4",null,c.n));var ol=el("ol");
+        c.r.forEach(function(r,i){var li=el("li",i===0?"first":"");li.appendChild(el("em",null,r[0]));li.appendChild(el("span",null,r[1]));ol.appendChild(li)});
+        d.appendChild(ol);g.appendChild(d)});
+      card.appendChild(g);
+      var f=el("div","ed-foot");if(ed.note)f.appendChild(el("span",null,ed.note));
+      if(ed.link){var l=el("a",null,ed.linkText);l.href=ed.link;l.target="_blank";l.rel="noopener";f.appendChild(l)}
+      card.appendChild(f);
+    }
+    host.appendChild(card);
+  });
+})();
+
+(function(){
+  var end=new Date(CONFIG.nextEdition).getTime();
+  function pad(n,l){return String(n).padStart(l||2,"0")}
+  function tick(){
+    var s=Math.floor((end-Date.now())/1000);
+    if(s<=0){document.getElementById("count").innerHTML='<div style="grid-column:1/-1;text-align:left;border:0;background:none;padding:0"><b style="font-size:26px;font-family:var(--f-body);font-stretch:75%;text-transform:uppercase">Septiembre 2027 ya llegó</b></div>';return false}
+    document.getElementById("cd-d").textContent=pad(Math.floor(s/86400),3);
+    document.getElementById("cd-h").textContent=pad(Math.floor(s%86400/3600));
+    document.getElementById("cd-m").textContent=pad(Math.floor(s%3600/60));
+    document.getElementById("cd-s").textContent=pad(s%60);return true;
+  }
+  if(tick()){var t=setInterval(function(){if(!tick())clearInterval(t)},1000)}
+})();
+
+(function(){
+  var form=document.getElementById("form"),err=document.getElementById("err"),res=document.getElementById("result"),out=document.getElementById("result-text");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var v={name:form.name.value.trim(),contact:form.contact.value.trim(),topic:form.topic.value,msg:form.msg.value.trim()};
+    if(!v.name||!v.contact||!v.msg){err.textContent="Completa tu nombre, un medio de contacto y el mensaje.";res.hidden=true;return}
+    err.textContent="";err.style.color="";
+    var text="Asunto: "+v.topic+"\nNombre: "+v.name+"\nContacto: "+v.contact+"\n\n"+v.msg;
+    if(CONFIG.formEndpoint){
+      fetch(CONFIG.formEndpoint,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(v)})
+        .then(function(r){if(!r.ok)throw 0;form.reset();err.style.color="var(--teal-deep)";err.textContent="Mensaje enviado. Te respondemos pronto."})
+        .catch(function(){err.textContent="No se pudo enviar. Escríbenos por Instagram."});
+      return;
+    }
+    out.textContent=text;res.hidden=false;
+  });
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,txt=out.textContent;
+    function sel(){var r=document.createRange();r.selectNodeContents(out);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Texto seleccionado"}
+    try{navigator.clipboard.writeText(txt).then(function(){b.textContent="Copiado"},sel)}catch(x){sel()}
+  });
+})();
+</script>
+</body>
+</html>
