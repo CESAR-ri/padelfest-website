@@ -106,8 +106,14 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
 .brands{margin-top:56px;padding-top:28px;border-top:1px solid var(--line-paper)}
 .brands p.k{font:700 12px/1 var(--f-body);font-stretch:100%;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-paper);margin:0 0 16px}
-.brands ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 26px}
-.brands li{font:700 17px/1.2 var(--f-body);font-stretch:75%;text-transform:uppercase;color:var(--ink);letter-spacing:.03em}
+.band{overflow:hidden;border-radius:18px;background:var(--night-2);padding:26px 0;-webkit-mask-image:none}
+.brands ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:0;width:max-content;animation:brands-scroll 70s linear infinite}
+.band:hover ul{animation-play-state:paused}
+.brands li{flex:none;display:flex;align-items:center;padding:0 clamp(24px,3.2vw,44px)}
+.brands li img{height:46px;width:auto;max-width:170px;object-fit:contain;display:block}
+@keyframes brands-scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.brands ul{animation:none;width:auto;flex-wrap:wrap;justify-content:center;gap:18px 0}.brands li[aria-hidden]{display:none}}
+@media(max-width:560px){.brands li img{height:38px}}
 
 .ed-list{display:grid;gap:26px;margin-top:40px}
 .ed{border:1.5px solid transparent;border-radius:26px;background:linear-gradient(var(--night-2),var(--night-2)) padding-box,var(--grad) border-box;overflow:hidden}
@@ -223,7 +229,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
       </div>
       <div class="brands">
         <p class="k">Marcas con las que hemos colaborado</p>
-        <ul id="brands"></ul>
+        <div class="band"><ul id="brands"></ul></div>
       </div>
     </div>
   </section>
@@ -292,7 +298,7 @@ var CONFIG = {
 
 if(CONFIG.liveEnabled)document.getElementById("nav-live").hidden=false;
 
-var BRANDS = ["Metaldom","Mercedes-Benz","Banreservas","JMMB","Sport Ice","Bastet Construction","Arajet","Unicaribe","Red Bull","San Pellegrino","Dolo-Neuromey","Yokohama","Häagen-Dazs","Drizoro","Ferrelíder","Rica","Aperol Spritz","Kahkow","Acqua Panna","Didáctica","Fundación St. Jude","Nature Valley","Fisiomasah","Aqualit","Seguros Crecer","Michelob Ultra"];
+var BRANDS = [["Metaldom","metaldom"],["Mercedes-Benz","mercedes"],["Banreservas","banreservas"],["JMMB","jmmb"],["Sport Ice","sportice"],["Bastet Construction","bastet"],["Arajet","arajet"],["Unicaribe","unicaribe"],["Red Bull","redbull"],["San Pellegrino","sanpellegrino"],["Dolo-Neuromey","dolo"],["Yokohama","yokohama"],["Häagen-Dazs","haagen"],["Drizoro","drizoro"],["Ferrelíder","ferrelider"],["Rica","rica"],["Aperol Spritz","aperol"],["Kahkow","kahkow"],["Acqua Panna","acquapanna"],["Didáctica","didactica"],["Fundación St. Jude","stjude"],["Nature Valley","naturevalley"],["Fisiomasah","fisiomasah"],["Aqualit","aqualit"],["Seguros Crecer","segurosCrecer"],["Michelob Ultra","michelob"]];
 
 var EDITIONS = [
   { title:"Padel Fest <b>Santo Domingo</b>", when:"Mayo 2026", venue:"Padel Warehouse",
@@ -318,7 +324,8 @@ var EDITIONS = [
 
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
 (function(){
-  var ul=document.getElementById("brands");BRANDS.forEach(function(b){ul.appendChild(el("li",null,b))});
+  var ul=document.getElementById("brands");
+  [0,1].forEach(function(pass){BRANDS.forEach(function(b){var li=document.createElement("li");if(pass)li.setAttribute("aria-hidden","true");var im=document.createElement("img");im.src="assets/brands/"+b[1]+".png";im.alt=pass?"":b[0];im.decoding="async";li.appendChild(im);ul.appendChild(li)})});
   var host=document.getElementById("ed-list");
   EDITIONS.forEach(function(ed){
     var card=el("article","ed"),head=el("div","ed-head"),h=el("h3");h.innerHTML=ed.title;head.appendChild(h);
