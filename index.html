@@ -110,10 +110,10 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backgroun
 .brands ul{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:0;width:max-content;animation:brands-scroll 70s linear infinite}
 .band:hover ul{animation-play-state:paused}
 .brands li{flex:none;display:flex;align-items:center;padding:0 clamp(24px,3.2vw,44px)}
-.brands li img{height:46px;width:auto;max-width:170px;object-fit:contain;display:block}
+.brands li img{height:46px;width:auto;max-width:190px;object-fit:contain;display:block}
 @keyframes brands-scroll{to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.brands ul{animation:none;width:auto;flex-wrap:wrap;justify-content:center;gap:18px 0}.brands li[aria-hidden]{display:none}}
-@media(max-width:560px){.brands li img{height:38px}}
+@media(prefers-reduced-motion:reduce){.brands ul{animation-duration:140s}}
+
 
 .ed-list{display:grid;gap:26px;margin-top:40px}
 .ed{border:1.5px solid transparent;border-radius:26px;background:linear-gradient(var(--night-2),var(--night-2)) padding-box,var(--grad) border-box;overflow:hidden}
@@ -325,7 +325,7 @@ var EDITIONS = [
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
 (function(){
   var ul=document.getElementById("brands");
-  [0,1].forEach(function(pass){BRANDS.forEach(function(b){var li=document.createElement("li");if(pass)li.setAttribute("aria-hidden","true");var im=document.createElement("img");im.src="assets/brands/"+b[1]+".png";im.alt=pass?"":b[0];im.decoding="async";li.appendChild(im);ul.appendChild(li)})});
+  [0,1].forEach(function(pass){BRANDS.forEach(function(b){var li=document.createElement("li");if(pass)li.setAttribute("aria-hidden","true");var im=document.createElement("img");im.src="assets/brands/"+b[1]+".png";im.alt=pass?"":b[0];im.onload=function(){var r=im.naturalWidth/im.naturalHeight,h=Math.min(70,Math.max(36,Math.sqrt(7200/r)));im.style.height=h+"px"};im.decoding="async";li.appendChild(im);ul.appendChild(li)})});
   var host=document.getElementById("ed-list");
   EDITIONS.forEach(function(ed){
     var card=el("article","ed"),head=el("div","ed-head"),h=el("h3");h.innerHTML=ed.title;head.appendChild(h);
